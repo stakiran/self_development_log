@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>自己啓発書ログ</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('#searchbox').keyup(function(){
+        if (!$(this).val()) {
+            var count = get_all_count();
+        } else {
+            $('#search_target_area li').hide();
+            var keywords = split_search_query(this.value);
+            // AND search with space-delim.
+            // No case-sensitive.
+            var count = $('#search_target_area .entry').filter(function(){
+                var text = $(this).text().toLowerCase();
+                var are_all_included = true;
+                for(var i=0; i<keywords.length; i++){
+                    var keyword = keywords[i].toLowerCase();
+                    if(text.indexOf(keyword) == -1){
+                        are_all_included = false;
+                        break;
+                    }
+                }
+                return are_all_included;
+            }).show().length;
+        }
+        $('#item_count').text(count);
+    });
+    $('#searchbox').focus(function(){
+        $(this).select();
+    });
+
+    $("body").keypress(function(e){
+        var keycode = e.keyCode;
+        if(keycode == 27){ // Esc
+            focus();
+            return false; // break from this scope.
+        }
+    });
+
+    $('#item_count').text(get_all_count());
+    clear();
+    focus();
+});
+function clear(){
+    $('#searchbox').val('');
+}
+function focus(){
+    $('#searchbox').focus();
+}
+function get_all_count(){
+    return $('#search_target_area .entry').show().length;
+}
+function split_search_query(searchbox_value){
+    var delim = ' ';
+    var keywords = searchbox_value.split(delim);
+
+    // keywords = ['keyword1', '', 'keyword2']
+    //                         ^^
+    //                       remove this dusts.
+    //
+    for(var i=0; i<keywords.length; i++){
+      var v = keywords[i];
+      if(v==='' || v.indexOf(delim)!==-1){
+        keywords.splice(i, 1);
+        i = i - 1; // Consider the shift of the rest elements.
+      }
+    }
+
+    return keywords;
+}
+</script>
+
+<style type="text/css">
+li {
+    margin: 4px 1px 4px 1px;
+}
+
+code {
+    background: silver;
+}
+
+q {
+    color: #0000ff;
+    font-weight: bold;
+}
+
+.emphasis {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+<body>
+<input id="searchbox" type="text" size="20">
+<p>Result:<strong id="item_count"></strong> items</p>
+<hr>
+<div id="search_target_area">
+<li class="entry">リポジトリは <a href="https://github.com/stakiran/self_development_log">https://github.com/stakiran/self_development_log</a></li>
+<li class="entry">2019/07/07 政治学者が実践する流されない読書 岩田温 ★★☆ / (ヒトラーの自己正当化読書はだめ) / 清水の舞台から飛び降りるつもりで本を買い漁れ / 万物は流転する(人間の機微書いた本を推してる印象) / (パラダイムシフトが魅力、でも大著や古典レベルじゃないと中々) / 他人と交際するのと同様の気持ちをもって書物に向かう / 舟。活字の舟。(参考文献中心にどんどん世界広げていく。広げられる本、広げたくなる本が良書。著者は知的に誠実と表現してる) / (三島の文章の美しさは桁違い、まずは潮騒から)</li>
+<li class="entry">2019/07/07 絶対にミスをしない人の脳の習慣 樺沢紫苑 ★★☆ / (ワーキングメモリのチャンクは 7 じゃなくて 3) / 樺澤式TODOリスト(am,pm,デイリー,スキマ,遊びなどのカテゴリでTODO3つずつ並べる、毎日最初にwordで編集したのを印刷して赤線引いてく感じ) / (うつ病の前に脳疲労、怪我でたとえるならうつ病は骨折で脳疲労は疲労骨折、脳疲労段階で予防するのが大事) / (ワーキングメモリ鍛えるには7時間睡眠や運動の他に料理、ボードゲーム、暗記学習) / 音楽は<dummy class="emphasis">「作業」</dummy><dummy class="emphasis">「運動」</dummy>にはプラスに働きます / スマホ認知症(脳疲労の主因) / ウルトラディアンリズム(90分高覚醒→20分低覚醒、なので疲れたら20分、間をとる、また覚醒しだすから) / 創造性の4B(バー、バスルーム、バス、ベッド) / リラックスのゴールデンタイム(2時間前)</li>
+<li class="entry">2019/07/07 コミュニティをつくって、自由に生きるという提案 マツダミヒロ ★★☆ / (7つの習慣の下位互換、というか手法の一例。コミュニティ参加して貢献して顔広げて要領と人脈得て、それから自分で運営してく感じ) / 知識だけでは、人を惹きつける魅力は身につかない / 発信だけだと関わり合いは生まれません / 顧客を選んでみよう</li>
+</div>
+</body>
+</html>
