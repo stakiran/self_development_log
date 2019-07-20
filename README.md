@@ -9,16 +9,12 @@ https://stakiran.github.io/self_development_log/
 ### フォーマット:
 
 ```
-- (DATE) (TITLE) (AUTHOR) (RATE) / (MEMO-01) / ... (MEMO-10)
+- (DATE) (TITLE) (AUTHOR) / (MEMO-01) / ... (MEMO-10)
 - ...
 ```
 
 - DATE
   - メモを書いた日
-- RATE
-  - ★☆☆ 全部読まなかった、読めなかった
-  - ★★☆ 全部読んだ
-  - ★★★ 手元に置いておきたい
 - MEMO
   - `引用`
   - `(自分の解釈)`
