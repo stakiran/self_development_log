@@ -10,7 +10,11 @@ $(function(){
             var count = get_all_count();
         } else {
             $('#search_target_area li').hide();
+
             var keywords = split_search_query(this.value);
+
+            // Filtering from all to keywords matched only
+            // 
             // AND search with space-delim.
             // No case-sensitive.
             var count = $('#search_target_area .entry').filter(function(){
@@ -25,6 +29,25 @@ $(function(){
                 }
                 return are_all_included;
             }).show().length;
+
+            // Coloring keywords to displayed <li> elements
+            // todo
+            // - n回目の検索で計n回分囲まれるのを消す(毎回全クリア→囲み、とか？)
+            // - html タグとして囲む(html() とか使う？)
+            /*
+            for(var i=0; i<keywords.length; i++){
+                var keyword = keywords[i].toLowerCase();
+                var re_before_query = new RegExp('(' + keyword + ')','g');
+                var after_query = '<dummy class="keyword">' + keyword + '</dummy>';
+                $('#search_target_area .entry').each(function(idx, dom){
+                    var jqElm = $(this);
+                    var curText = jqElm.text();
+                    var newText = curText.replace(re_before_query, after_query)
+                    console.log(curText + "/" + newText);
+                    jqElm.text(newText);
+                });
+            }
+            */
         }
         $('#item_count').text(count);
     });
