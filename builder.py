@@ -34,6 +34,7 @@ def append_to_out(appendee_list, appender, use_ignore=False):
 
 class render:
 
+    # @param re_pattern Must contains () to use grouping for this tags algorithm even if simple query.
     def get_all_taginfo(original_string, re_pattern):
         compiled_obj = re.compile(re_pattern)
         iters = compiled_obj.finditer(original_string)
@@ -147,6 +148,23 @@ class render:
 
         return replaced_string
 
+    def replace_additiondate_pattern(original_string):
+        pattern = r'([0-9]{4}/[0-9]{2}/[0-9]{2})'
+
+        all_taginfo = render.get_all_taginfo(original_string, pattern)
+
+        replaced_string = original_string
+
+        for taginfo in all_taginfo:
+            datestr = taginfo['tags'][0]
+
+            before = taginfo['matched_string']
+            after = '<dummy class="additiondate">{:}</dummy>'.format(datestr)
+
+            replaced_string = replaced_string.replace(before, after)
+
+        return replaced_string
+
     def replace_all(original_string):
         replaced_string = original_string
         replaced_string = render.replace_bold_pattern(replaced_string)
@@ -154,6 +172,7 @@ class render:
         replaced_string = render.replace_literal_pattern(replaced_string)
         replaced_string = render.replace_quote_pattern(replaced_string)
         replaced_string = render.replace_emphasis_pattern(replaced_string)
+        replaced_string = render.replace_additiondate_pattern(replaced_string)
         return replaced_string
 
 def parse_arguments():
