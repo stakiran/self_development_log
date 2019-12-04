@@ -1,8 +1,12 @@
 @echo off
 setlocal
 
-echo building...
+echo (1/2) building index.html...
 python %~dp0builder.py -i %~dp0log.md -o %~dp0index.html -t %~dp0template.html
+echo fin.
+
+echo (2/2) building log_pretty.html...
+python %~dp0log_indenter.py -i %~dp0log.md -o %~dp0log_pretty.md
 echo fin.
 
 echo uploading...
