@@ -11,5 +11,6 @@ echo fin.
 
 echo uploading...
 rem upload.bat is my original batchfile to do add, commit and push at one time.
+rem see: https://github.com/stakiran/gaas_for_windows/blob/master/upload.bat
 upload
 echo fin.
