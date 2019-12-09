@@ -20,7 +20,7 @@ https://stakiran.github.io/self_development_log/
   - :speech_balloon: `(自分の解釈)`
 
 ## LICENSE
-[MIT License](LICENSE), but [jquery.org/license](https://jquery.org/license/) about jQuery.
+コードは [MIT License](LICENSE)
 
 ## Author
 [stakiran](https://github.com/stakiran)
