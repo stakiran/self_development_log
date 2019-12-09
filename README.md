@@ -16,8 +16,8 @@ https://stakiran.github.io/self_development_log/
 - DATE
   - メモを書いた日
 - MEMO
-  - `引用`
-  - `(自分の解釈)`
+  - :notebook: `引用`
+  - :speech_balloon: `(自分の解釈)`
 
 ## LICENSE
 [MIT License](LICENSE), but [jquery.org/license](https://jquery.org/license/) about jQuery.
