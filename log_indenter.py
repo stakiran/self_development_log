@@ -74,10 +74,17 @@ for i,line in enumerate(lines):
 
     for element in elements[1:]:
         template_line = '    - {} {}'
-        emoji = ':notebook:'
-        if element.find('(') != -1:
-            emoji = ':speech_balloon:'
-        outline  = template_line.format(emoji, element)
+        emoji_quote  = ':notebook:'
+        emoji_mynote = ':speech_balloon:'
+        out_emojis = '' 
+        if element.startswith('('):
+            out_emojis = emoji_mynote
+        else:
+            out_emojis = emoji_quote
+            if element.find('(') != -1:
+                out_emojis += emoji_mynote
+
+        outline  = template_line.format(out_emojis, element)
         outlines.append(outline)
 
 outbody = '\n'.join(outlines)
