@@ -1,4 +1,18 @@
 # 自己啓発書ログ
+- 2020/01/11 元気のでる車いすの話
+    - :speech_balloon: (2003年初版)
+    - :notebook: 車いす姿勢保持協会
+    - :notebook: レーナ・マリアさん 足を使って、買い物、料理、洗濯をする
+    - :notebook: 第三世代 モジュラー型
+    - :speech_balloon: (備品の車いすは第二世代でダメ)
+    - :notebook: 車いすに乗る技術
+    - :speech_balloon: (ひとりでできるのに他人がおせっかい焼いてくる ← 階段昇降時など)
+    - :notebook: 車いすシーティング
+    - :notebook: 車いすシーティング・エンジニア
+    - :notebook: 「いい姿勢」……（両方のお尻の骨）を支点にして座っています
+    - :notebook: キャンバー角
+    - :notebook::speech_balloon: 水勾配(1～2度だがハンドリム操作調整しないと持ってかれる世界)
+    - :notebook: 
 - 2020/01/05 哲学入門 戸田山和久
     - :notebook: 唯物論
     - :notebook: 二元論
