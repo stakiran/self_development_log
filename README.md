@@ -4,7 +4,7 @@
 https://stakiran.github.io/self_development_log/
 
 ## このリポジトリは何？
-[isg](https://github.com/stakiran/isg) を使って自己啓発書から学んだことをまとめている。単に Markdown でメモしたものを GitHub Pages に(インクリメンタルサーチ付 HTML にビルドしてから)置いてるだけ。
+[isg](https://github.com/stakiran/isg) を使って(主に)自己啓発書から学んだことをまとめている。単に Markdown でメモしたものを GitHub Pages に(インクリメンタルサーチ付 HTML にビルドしてから)置いてるだけ。
 
 ### フォーマット:
 
