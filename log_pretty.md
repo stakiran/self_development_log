@@ -1,4 +1,22 @@
 # 自己啓発書ログ
+- 2020/02/22 管理ゼロで成果はあがる 倉貫義人
+    - :notebook: 生産的 自律的 独創的に働く
+    - :notebook: ふりかえりで話すのは……業務の進め方や仕事のやり方
+    - :speech_balloon: (ノウハウを蓄積したいなら自分でやる、そうじゃないならさっさと外注)
+    - :notebook: タスクばらし
+    - :notebook: 議事メモは……アウトライン形式でまとめていくイメージ
+    - :notebook::speech_balloon: ホウレンソウから「ザッソウ」(雑談と相談)
+    - :notebook: 心理的安全性
+    - :notebook::speech_balloon: 雑談と仕事の場所をツールで分けない(分けると雑談の垣根上がる)
+    - :notebook::speech_balloon: 電話の応答サービス(受けた通話内容をチャットで知らせてくれる)
+    - :notebook::speech_balloon: ホラクラシー(フラット)
+    - :speech_balloon: (申請過程がオープンなので承認要らない)
+    - :speech_balloon: (給料は全員一律 + 成果出せたら残り時間は自由に過ごしていいという時間的報酬)
+    - :notebook: ルールで縛るよりも価値観と良識
+    - :speech_balloon: (管理ではなく採用にコストかける)
+    - :notebook: バーチャルオフィス……存在感を共有
+    - :notebook: 相性が合わない仕事は断る
+    - :notebook::speech_balloon: 日中の同じ時間帯に働く(バーチャルオフィスで顔見える感出すには必須らしい)
 - 2020/02/09 書くための名前のない技術 case 3 千葉雅也さん Tak. 千葉雅也
     - :notebook: InDesign：アドビ社が販売するDTPソフト
     - :notebook: ざーっと自由連想で書く
